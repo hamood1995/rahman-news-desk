@@ -18,7 +18,7 @@ window.RAHMAN_STORIES = [
     location: "Forbell St & McKinley Ave",
     type: "Police • Brooklyn",
     href: "story-02.html",
-    thumb: "stolen-vehicle-forbell-mckinley-dec13-2025.jpg",
+    thumb: "IMG_5487.jpg",
     excerpt: "NYPD recovered a vehicle reported stolen in 2021 after responding to Forbell St & McKinley Ave. The vehicle was towed from the scene."
   }
 ];
