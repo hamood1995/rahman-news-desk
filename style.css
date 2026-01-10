@@ -197,3 +197,72 @@ a:hover{color:var(--accent); text-decoration:none}
   border:1px solid var(--border);
   background:#000;
 }
+
+/* =========================
+   HOME PAGE GRID
+   ========================= */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* =========================
+   MOBILE VERSION (REAL)
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Stack stories like NYPost */
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Top story */
+  #topStory h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  #topStory img {
+    width: 100%;
+    height: auto;
+    margin: 8px 0;
+  }
+
+  /* More stories section */
+  #moreStories > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #moreStories img {
+    width: 70px;
+    height: 55px;
+    object-fit: cover;
+  }
+
+  /* Navigation mobile layout */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .navlinks {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* Publisher text spacing */
+  .hero div {
+    float: none !important;
+    margin-top: 8px;
+    text-align: left;
+  }
+}
+
