@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Rahman News Desk</title>
+  <title>Rahman News Desk | NYC Breaking News</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
 
+  <!-- NAV -->
   <div class="nav">
     <div class="brand">
       <h1>Rahman News Desk</h1>
@@ -21,29 +22,32 @@
     </div>
   </div>
 
-  <div class="masthead">
-    <div>
-      <h2>RAHMAN NEWS DESK</h2>
-      <p>On-scene reporting &amp; photography across New York City.</p>
-    </div>
-    <div style="color:var(--muted); font-size:13px; text-align:right;">
-      Publisher: <b style="color:var(--text);">Emdadur Rahman</b><br>
-      NYC
+  <!-- HEADER -->
+  <div class="hero">
+    <h2>RAHMAN NEWS DESK</h2>
+    <p>On-scene reporting &amp; photography across New York City.</p>
+    <div style="float:right;text-align:right;font-size:13px;color:var(--muted)">
+      Publisher: <b>Emdadur Rahman</b><br>NYC
     </div>
   </div>
 
-  <div class="home-grid">
-    <!-- LEFT: TOP STORY (auto) -->
-    <div class="feature" id="topStory"></div>
+  <!-- MAIN GRID -->
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px">
 
-    <!-- RIGHT: MORE STORIES (auto) -->
-    <div class="list">
-      <h3>More Stories</h3>
-      <div id="moreStories"></div>
-      <div class="item" style="border-top:1px solid var(--border); padding-top:12px; margin-top:10px;">
-        <a href="stories.html" style="color:var(--accent); font-weight:700;">View full archive →</a>
-      </div>
+    <!-- LEFT: TOP STORY -->
+    <div class="article" id="topStory">
+      <p style="color:var(--muted)">Loading top story…</p>
     </div>
+
+    <!-- RIGHT: MORE STORIES -->
+    <div class="article">
+      <h3 style="margin-top:0">More Stories</h3>
+      <div id="moreStories"></div>
+      <p style="margin-top:12px">
+        <a href="stories.html">View full archive →</a>
+      </p>
+    </div>
+
   </div>
 
   <div class="footer">
@@ -52,68 +56,47 @@
 
 </div>
 
+<!-- STORY DATA -->
 <script src="stories-data.js"></script>
-<script>
-  const stories = (window.RAHMAN_STORIES || []).slice();
-  // newest first (simple: assumes list already in order; if you want sort we can add)
-  const top = stories[0];
-  const rest = stories.slice(1);
 
-  const topEl = document.getElementById("topStory");
-  if (top) {
-    topEl.innerHTML = `
-      <div class="feature-top">
-        <img class="thumb" src="${top.thumb}" alt="${top.title}">
+<script>
+if (!window.RAHMAN_STORIES || RAHMAN_STORIES.length === 0) {
+  document.getElementById("topStory").innerHTML =
+    "<p>No stories published yet.</p>";
+} else {
+
+  // TOP STORY = MOST RECENT
+  const top = RAHMAN_STORIES[0];
+  document.getElementById("topStory").innerHTML = `
+    <span style="font-size:12px;color:#ff5252">BREAKING • ${top.borough}</span>
+    <h3>${top.title}</h3>
+    <p style="color:var(--muted)">
+      ${top.date} • ${top.location}
+    </p>
+    <img src="${top.thumb}" alt="${top.title}" style="width:100%;border-radius:6px;margin:8px 0">
+    <p>${top.excerpt}</p>
+    <a href="${top.href}">Read more →</a>
+  `;
+
+  // MORE STORIES
+  const more = document.getElementById("moreStories");
+  more.innerHTML = "";
+
+  RAHMAN_STORIES.slice(1, 5).forEach(story => {
+    more.innerHTML += `
+      <div style="display:flex;gap:10px;margin-bottom:12px">
+        <img src="${story.thumb}" style="width:80px;height:60px;object-fit:cover;border-radius:4px">
         <div>
-          <p class="kicker">${top.type || "Top story"}</p>
-          <h3><a href="${top.href}">${top.title}</a></h3>
-          <p class="meta">${top.date} • ${top.borough} • ${top.location}</p>
-          <p class="deck">${top.excerpt || ""}</p>
-          <p style="margin:10px 0 0;">
-            <a href="${top.href}" style="color:var(--accent); font-weight:700;">Read more →</a>
-          </p>
+          <b>${story.title}</b><br>
+          <small style="color:var(--muted)">
+            ${story.date} • ${story.borough}
+          </small>
         </div>
       </div>
     `;
-  } else {
-    topEl.innerHTML = `<div class="feature-top"><div><p class="kicker">No stories yet</p></div></div>`;
-  }
-
-  const moreEl = document.getElementById("moreStories");
-
-  // show up to 3 more stories + placeholders
-  const maxMore = 3;
-  const items = rest.slice(0, maxMore).map(s => `
-    <div class="item">
-      <img src="${s.thumb}" alt="${s.title}">
-      <div>
-        <p class="title"><a href="${s.href}">${s.title}</a></p>
-        <p class="smallmeta">${s.date} • ${s.borough}</p>
-      </div>
-    </div>
-  `);
-
-  // Fill remaining slots with black placeholders (coming soon)
-  const placeholders = (window.RAHMAN_PLACEHOLDERS || []);
-  const needed = maxMore - items.length;
-  for (let i = 0; i < needed && i < placeholders.length; i++) {
-    const p = placeholders[i];
-    items.push(`
-      <div class="item">
-        <div style="width:96px; height:64px; border-radius:10px; border:1px solid var(--border); background:#000;"></div>
-        <div>
-          <p class="title"><a href="${p.href}">Story ${p.id} — Coming soon</a></p>
-          <p class="smallmeta">(Date) • (Borough)</p>
-        </div>
-      </div>
-    `);
-  }
-
-  moreEl.innerHTML = items.join("");
-  
-<script src="stories-data.js"></script>
-<script>
-  // auto-load code here
+  });
+}
 </script>
+
 </body>
 </html>
