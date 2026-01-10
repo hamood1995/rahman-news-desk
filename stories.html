@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Stories | Rahman News Desk</title>
+  <title>Stories Archive | Rahman News Desk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
 
+  <!-- NAV -->
   <div class="nav">
     <div class="brand">
       <h1>Rahman News Desk</h1>
@@ -21,29 +22,15 @@
     </div>
   </div>
 
+  <!-- HEADER -->
   <div class="hero">
-    <h2 style="margin:0 0 8px;">Stories</h2>
-    <p style="margin:0; color:var(--muted);">
-      Published incident reports and on-scene coverage across New York City.
-    </p>
+    <h2>Stories</h2>
+    <p>Published incident reports and on-scene coverage across New York City.</p>
   </div>
 
-  <div class="article" style="margin-top:16px;">
-    <h3 style="margin-top:0;">Published</h3>
-
-    <p style="margin:10px 0;">
-      <b>Dec 2, 2025 • Brooklyn</b><br>
-      <a href="story-01.html">FDNY Responds to Dollar Van Fire on Flatbush Avenue</a>
-    </p>
-
-    <div style="height:1px; background:var(--border); margin:14px 0;"></div>
-
-    <h3 style="margin:0 0 10px;">Coming Soon</h3>
-    <p style="margin:8px 0; color:var(--muted);">Story 02 – To be published</p>
-    <p style="margin:8px 0; color:var(--muted);">Story 03 – To be published</p>
-    <p style="margin:8px 0; color:var(--muted);">Story 04 – To be published</p>
-    <p style="margin:8px 0; color:var(--muted);">Story 05 – To be published</p>
-    <p style="margin:8px 0; color:var(--muted);">Story 06 – To be published</p>
+  <!-- STORY LIST -->
+  <div class="article" id="storiesList">
+    <p style="color:var(--muted)">Loading stories…</p>
   </div>
 
   <div class="footer">
@@ -51,5 +38,26 @@
   </div>
 
 </div>
+
+<script src="stories-data.js"></script>
+<script>
+const list = document.getElementById("storiesList");
+
+if (!window.RAHMAN_STORIES || RAHMAN_STORIES.length === 0) {
+  list.innerHTML = "<p>No stories published yet.</p>";
+} else {
+  list.innerHTML = "";
+  RAHMAN_STORIES.forEach(story => {
+    list.innerHTML += `
+      <p style="margin:12px 0">
+        <b>${story.date} · ${story.borough}</b><br>
+        <a href="${story.href}">${story.title}</a>
+      </p>
+      <div style="height:1px;background:var(--border);margin:12px 0"></div>
+    `;
+  });
+}
+</script>
+
 </body>
 </html>
