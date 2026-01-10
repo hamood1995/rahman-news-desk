@@ -33,71 +33,17 @@
   </div>
 
   <div class="home-grid">
+    <!-- LEFT: TOP STORY (auto) -->
+    <div class="feature" id="topStory"></div>
 
-    <!-- LEFT: TOP STORY -->
-    <div class="feature">
-      <div class="feature-top">
-        <!-- TOP STORY IMAGE (Story 01) -->
-        <img class="thumb" src="94b17a7e-a0dd-46cb-84da-375feb67292e.JPG" alt="Vehicle fire scene, Brooklyn">
-        <div>
-          <p class="kicker">Breaking • Brooklyn</p>
-          <h3><a href="story-01.html">FDNY Responds to Dollar Van Fire on Flatbush Avenue</a></h3>
-          <p class="meta">Dec 2, 2025 • Brooklyn • Flatbush Ave &amp; Avenue D</p>
-          <p class="deck">
-            A dollar van caught fire near Flatbush Avenue &amp; Avenue D. FDNY responded within minutes and controlled the fire.
-          </p>
-          <p style="margin:10px 0 0;">
-            <a href="story-01.html" style="color:var(--accent); font-weight:700;">Read more →</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: MORE STORIES LIST -->
+    <!-- RIGHT: MORE STORIES (auto) -->
     <div class="list">
       <h3>More Stories</h3>
-
-      <!-- Story 01 thumbnail -->
-      <div class="item">
-        <img src="94b17a7e-a0dd-46cb-84da-375feb67292e.JPG" alt="Dollar van fire thumbnail">
-        <div>
-          <p class="title"><a href="story-01.html">Dollar Van Fire on Flatbush Ave</a></p>
-          <p class="smallmeta">Dec 2, 2025 • Brooklyn</p>
-        </div>
-      </div>
-
-      <!-- Story 02 placeholder (NO reused image) -->
-      <div class="item">
-        <div style="width:96px; height:64px; border-radius:10px; border:1px solid var(--border); background:#000;"></div>
-        <div>
-          <p class="title"><a href="story-02.html">Story 02 — Coming soon</a></p>
-          <p class="smallmeta">(Date) • (Borough)</p>
-        </div>
-      </div>
-
-      <!-- Story 03 placeholder (NO reused image) -->
-      <div class="item">
-        <div style="width:96px; height:64px; border-radius:10px; border:1px solid var(--border); background:#000;"></div>
-        <div>
-          <p class="title"><a href="story-03.html">Story 03 — Coming soon</a></p>
-          <p class="smallmeta">(Date) • (Borough)</p>
-        </div>
-      </div>
-
-      <!-- Story 04 placeholder (NO reused image) -->
-      <div class="item">
-        <div style="width:96px; height:64px; border-radius:10px; border:1px solid var(--border); background:#000;"></div>
-        <div>
-          <p class="title"><a href="story-04.html">Story 04 — Coming soon</a></p>
-          <p class="smallmeta">(Date) • (Borough)</p>
-        </div>
-      </div>
-
+      <div id="moreStories"></div>
       <div class="item" style="border-top:1px solid var(--border); padding-top:12px; margin-top:10px;">
         <a href="stories.html" style="color:var(--accent); font-weight:700;">View full archive →</a>
       </div>
     </div>
-
   </div>
 
   <div class="footer">
@@ -105,5 +51,65 @@
   </div>
 
 </div>
+
+<script src="stories-data.js"></script>
+<script>
+  const stories = (window.RAHMAN_STORIES || []).slice();
+  // newest first (simple: assumes list already in order; if you want sort we can add)
+  const top = stories[0];
+  const rest = stories.slice(1);
+
+  const topEl = document.getElementById("topStory");
+  if (top) {
+    topEl.innerHTML = `
+      <div class="feature-top">
+        <img class="thumb" src="${top.thumb}" alt="${top.title}">
+        <div>
+          <p class="kicker">${top.type || "Top story"}</p>
+          <h3><a href="${top.href}">${top.title}</a></h3>
+          <p class="meta">${top.date} • ${top.borough} • ${top.location}</p>
+          <p class="deck">${top.excerpt || ""}</p>
+          <p style="margin:10px 0 0;">
+            <a href="${top.href}" style="color:var(--accent); font-weight:700;">Read more →</a>
+          </p>
+        </div>
+      </div>
+    `;
+  } else {
+    topEl.innerHTML = `<div class="feature-top"><div><p class="kicker">No stories yet</p></div></div>`;
+  }
+
+  const moreEl = document.getElementById("moreStories");
+
+  // show up to 3 more stories + placeholders
+  const maxMore = 3;
+  const items = rest.slice(0, maxMore).map(s => `
+    <div class="item">
+      <img src="${s.thumb}" alt="${s.title}">
+      <div>
+        <p class="title"><a href="${s.href}">${s.title}</a></p>
+        <p class="smallmeta">${s.date} • ${s.borough}</p>
+      </div>
+    </div>
+  `);
+
+  // Fill remaining slots with black placeholders (coming soon)
+  const placeholders = (window.RAHMAN_PLACEHOLDERS || []);
+  const needed = maxMore - items.length;
+  for (let i = 0; i < needed && i < placeholders.length; i++) {
+    const p = placeholders[i];
+    items.push(`
+      <div class="item">
+        <div style="width:96px; height:64px; border-radius:10px; border:1px solid var(--border); background:#000;"></div>
+        <div>
+          <p class="title"><a href="${p.href}">Story ${p.id} — Coming soon</a></p>
+          <p class="smallmeta">(Date) • (Borough)</p>
+        </div>
+      </div>
+    `);
+  }
+
+  moreEl.innerHTML = items.join("");
+</script>
 </body>
 </html>
