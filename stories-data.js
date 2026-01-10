@@ -1,4 +1,3 @@
-// Edit ONLY this file when adding new stories.
 window.RAHMAN_STORIES = [
   {
     id: "01",
@@ -20,11 +19,10 @@ window.RAHMAN_STORIES = [
     type: "Police • Brooklyn",
     href: "story-02.html",
     thumb: "stolen-vehicle-forbell-mckinley-dec13-2025.jpg",
-    excerpt: "NYPD responded to a reported stolen vehicle recovery and towed the vehicle from the scene."
+    excerpt: "NYPD recovered a vehicle reported stolen in 2021 after responding to Forbell St & McKinley Ave. The vehicle was towed from the scene."
   }
 ];
 
-// Optional placeholders shown until you publish stories 03–06
 window.RAHMAN_PLACEHOLDERS = [
   { id:"03", href:"story-03.html" },
   { id:"04", href:"story-04.html" },
