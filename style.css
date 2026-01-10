@@ -4,7 +4,7 @@
   --text:#e9eef6;
   --muted:#a9b4c3;
   --accent:#4da3ff;
-  --border: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.10);
 }
 
 *{box-sizing:border-box}
@@ -17,13 +17,13 @@ body{
   line-height:1.5;
 }
 
-a{color:var(--accent); text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--text); text-decoration:none}
+a:hover{color:var(--accent); text-decoration:none}
 
 .container{
-  max-width: 980px;
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 18px 16px 60px;
 }
 
 .nav{
@@ -33,14 +33,15 @@ a:hover{text-decoration:underline}
   padding:14px 16px;
   border:1px solid var(--border);
   border-radius:14px;
-  margin-bottom:20px;
+  margin-bottom:14px;
+  background: rgba(17,24,36,0.55);
 }
 
 .brand h1{
   margin:0;
   font-size:18px;
+  font-weight:700;
 }
-
 .brand small{
   color:var(--muted);
   font-size:13px;
@@ -49,48 +50,150 @@ a:hover{text-decoration:underline}
 .navlinks a{
   margin-left:14px;
   font-size:14px;
-}
-
-.hero{
-  padding:20px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  margin-bottom:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap:14px;
-}
-
-.card{
-  padding:16px;
-  border:1px solid var(--border);
-  border-radius:14px;
+  color: var(--accent);
 }
 
 .footer{
-  margin-top:30px;
+  margin-top:26px;
   font-size:13px;
   color:var(--muted);
   text-align:center;
 }
 
+/* Article container */
 .article{
   border:1px solid var(--border);
   border-radius:14px;
-  padding:20px;
+  padding:18px;
+  background: rgba(17,24,36,0.55);
 }
 
-/* Story images */
+/* NYPost-like masthead */
+.masthead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  padding:16px 18px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background: rgba(17,24,36,0.55);
+  margin-bottom:14px;
+}
+.masthead h2{
+  margin:0;
+  font-size:28px;
+  letter-spacing:1px;
+}
+.masthead p{
+  margin:6px 0 0;
+  color:var(--muted);
+}
+
+/* Layout: big left + list right */
+.home-grid{
+  display:grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap:14px;
+}
+@media (max-width: 920px){
+  .home-grid{ grid-template-columns: 1fr; }
+}
+
+/* Featured story (top story) */
+.feature{
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background: rgba(17,24,36,0.55);
+}
+.feature-top{
+  display:grid;
+  grid-template-columns: 260px 1fr;
+  gap:14px;
+  padding:14px;
+}
+@media (max-width: 560px){
+  .feature-top{ grid-template-columns: 1fr; }
+}
+.thumb{
+  width:100%;
+  height:170px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  object-fit: cover;
+  background:#000;
+}
+.kicker{
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  margin:0 0 8px;
+}
+.feature h3{
+  margin:0 0 8px;
+  font-size:22px;
+  line-height:1.2;
+}
+.meta{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.deck{
+  margin:0;
+  color:var(--muted);
+}
+
+/* Right column list */
+.list{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  background: rgba(17,24,36,0.55);
+}
+.list h3{
+  margin:0 0 10px;
+  font-size:16px;
+  letter-spacing:.3px;
+}
+.item{
+  display:grid;
+  grid-template-columns: 96px 1fr;
+  gap:10px;
+  padding:10px 0;
+  border-top:1px solid var(--border);
+}
+.item:first-of-type{ border-top:none; padding-top:0; }
+.item img{
+  width:96px;
+  height:64px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  object-fit: cover;
+  background:#000;
+}
+.item .title{
+  margin:0 0 4px;
+  font-weight:700;
+  line-height:1.2;
+}
+.item .smallmeta{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* Story page images (prevents giant images) */
 .article img{
   display:block;
   width:100%;
-  max-width: 780px;   /* limits how wide it can get on desktop */
-  height:auto;
-  margin: 14px auto;  /* centers the image */
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  max-width:720px;
+  max-height:360px;
+  object-fit:contain;
+  margin:16px auto;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#000;
 }
-
