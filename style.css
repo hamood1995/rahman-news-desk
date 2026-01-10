@@ -82,4 +82,14 @@ a:hover{text-decoration:underline}
   border-radius:14px;
   padding:20px;
 }
+/* Story images */
+.article img{
+  display:block;
+  width:100%;
+  max-width: 780px;   /* limits how wide it can get on desktop */
+  height:auto;
+  margin: 14px auto;  /* centers the image */
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
 
