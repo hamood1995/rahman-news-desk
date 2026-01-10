@@ -1,98 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Rahman News Desk | NYC Breaking News</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahman News Desk</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
 
-  <!-- NAV -->
-  <div class="nav">
-    <div class="brand">
-      <h1>Rahman News Desk</h1>
-      <small>Independent NYC spot &amp; breaking news</small>
-    </div>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="stories.html">Stories</a>
-      <a href="about.html">About</a>
-    </div>
+<!-- NAV BAR -->
+<div class="nav">
+  <div class="nav-left">
+    <strong>Rahman News Desk</strong><br>
+    <small>Independent NYC spot & breaking news</small>
   </div>
-
-  <h2>RAHMAN NEWS DESK</h2>
-  <p>On-scene reporting &amp; photography across New York City.</p>
-</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="stories.html">Stories</a>
+    <a href="about.html">About</a>
   </div>
-
-  <!-- MAIN GRID -->
-  <div class="home-grid">
-
-    <!-- LEFT: TOP STORY -->
-    <div class="article" id="topStory">
-      <p style="color:var(--muted)">Loading top story…</p>
-    </div>
-
-    <!-- RIGHT: MORE STORIES -->
-    <div class="article">
-      <h3 style="margin-top:0">More Stories</h3>
-      <div id="moreStories"></div>
-      <p style="margin-top:12px">
-        <a href="stories.html">View full archive →</a>
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    © Rahman News Desk • Publisher: Emdadur Rahman
-  </div>
-
 </div>
 
-<!-- STORY DATA -->
-<script src="stories-data.js"></script>
+<!-- MAIN GRID -->
+<div class="container home-grid">
 
-<script>
-if (!window.RAHMAN_STORIES || RAHMAN_STORIES.length === 0) {
-  document.getElementById("topStory").innerHTML =
-    "<p>No stories published yet.</p>";
-} else {
+  <!-- LEFT: TOP STORY -->
+  <div class="article">
+    <span class="badge">BREAKING · Brooklyn</span>
+    <h1>FDNY Responds to Dollar Van Fire on Flatbush Avenue</h1>
+    <div class="meta">Dec 2, 2025 · Flatbush Ave & Avenue D</div>
 
-  // TOP STORY = MOST RECENT
-  const top = RAHMAN_STORIES[0];
-  document.getElementById("topStory").innerHTML = `
-    <span style="font-size:12px;color:#ff5252">BREAKING • ${top.borough}</span>
-    <h3>${top.title}</h3>
-    <p style="color:var(--muted)">
-      ${top.date} • ${top.location}
+    <img src="94b17a7e-a0dd-46cb-84da-375feb67292e.JPG" alt="Dollar van fire on Flatbush Ave">
+
+    <p>
+      A dollar van caught fire near Flatbush Avenue & Avenue D.
+      FDNY responded within minutes and controlled the fire.
     </p>
-    <img src="${top.thumb}" alt="${top.title}" style="width:100%;border-radius:6px;margin:8px 0">
-    <p>${top.excerpt}</p>
-    <a href="${top.href}">Read more →</a>
-  `;
 
-  // MORE STORIES
-  const more = document.getElementById("moreStories");
-  more.innerHTML = "";
+    <a class="read-more" href="story-01.html">Read more →</a>
+  </div>
 
-  RAHMAN_STORIES.slice(1, 5).forEach(story => {
-    more.innerHTML += `
-      <div style="display:flex;gap:10px;margin-bottom:12px">
-        <img src="${story.thumb}" style="width:80px;height:60px;object-fit:cover;border-radius:4px">
-        <div>
-          <b>${story.title}</b><br>
-          <small style="color:var(--muted)">
-            ${story.date} • ${story.borough}
-          </small>
-        </div>
+  <!-- RIGHT: MORE STORIES -->
+  <div class="article">
+    <h3>More Stories</h3>
+
+    <div class="side-story">
+      <img src="IMG_5487.jpg" alt="Recovered stolen vehicle">
+      <div>
+        <a href="story-02.html">
+          NYPD Recovers Stolen Vehicle During Evening Response
+        </a>
+        <div class="meta">Dec 13, 2025 · Brooklyn</div>
       </div>
-    `;
-  });
-}
-</script>
+    </div>
+
+    <a class="archive-link" href="stories.html">View full archive →</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Rahman News Desk · Publisher: Emdadur Rahman
+</div>
 
 </body>
 </html>
