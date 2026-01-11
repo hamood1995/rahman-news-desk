@@ -21,6 +21,18 @@ window.RAHMAN_STORIES = [
     thumb: "IMG_5487.jpg",
     excerpt: "NYPD recovered a vehicle reported stolen in 2021 after responding to Forbell St & McKinley Ave. The vehicle was towed from the scene."
   }
+
+  {
+    id: "03",
+    title: "FDNY Responds to School Bus Fire in Ozone Park",
+    date: "Apr 1, 2025",
+    borough: "Queens",
+    location: "80th Street & 97th Avenue",
+    type: "FDNY • Queens",
+    href: "story-03.html",
+    thumb: "A5B04FE0-9156-4B05-AEC6-2B9A46B4305A.jpeg",
+    excerpt: "A school bus caught fire during school hours after initially emitting smoke. FDNY responded promptly and extinguished the fire. No injuries were reported."
+  }
 ];
 
 window.RAHMAN_PLACEHOLDERS = [
