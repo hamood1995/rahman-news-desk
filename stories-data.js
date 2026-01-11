@@ -36,7 +36,6 @@ window.RAHMAN_STORIES = [
 ];
 
 window.RAHMAN_PLACEHOLDERS = [
-  { id:"03", href:"story-03.html" },
   { id:"04", href:"story-04.html" },
   { id:"05", href:"story-05.html" },
   { id:"06", href:"story-06.html" }
