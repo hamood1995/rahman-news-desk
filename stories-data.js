@@ -23,16 +23,16 @@ window.RAHMAN_STORIES = [
   }
 
   {
-    id: "03",
-    title: "FDNY Responds to School Bus Fire in Ozone Park",
-    date: "Apr 1, 2025",
-    borough: "Queens",
-    location: "80th Street & 97th Avenue",
-    type: "FDNY • Queens",
-    href: "story-03.html",
-    thumb: "A5B04FE0-9156-4B05-AEC6-2B9A46B4305A.jpeg",
-    excerpt: "A school bus caught fire during school hours after initially emitting smoke. FDNY responded promptly and extinguished the fire. No injuries were reported."
-  }
+  id: "03",
+  title: "School Bus Catches Fire During Morning Hours in Ozone Park",
+  date: "Apr 1, 2025",
+  borough: "Queens",
+  location: "80th St & 97th Ave",
+  type: "FDNY • Queens",
+  href: "story-03.html",
+  thumb: "IMG_0717.jpeg",
+  excerpt: "A school bus began smoking and caught fire during school hours in Ozone Park. FDNY responded quickly and extinguished the fire. No injuries were reported."
+}
 ];
 
 window.RAHMAN_PLACEHOLDERS = [
