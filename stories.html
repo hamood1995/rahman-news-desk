@@ -37,28 +37,6 @@
     © Rahman News Desk • Publisher: Emdadur Rahman
   </div>
 
-</div>
-
-<script src="stories-data.js"></script>
-<script>
-const list = document.getElementById("storiesList");
-
-if (!window.RAHMAN_STORIES || RAHMAN_STORIES.length === 0) {
-  list.innerHTML = "<p>No stories published yet.</p>";
-} else {
-  list.innerHTML = "";
-  RAHMAN_STORIES.forEach(story => {
-    list.innerHTML += `
-      <p style="margin:12px 0">
-        <b>${story.date} · ${story.borough}</b><br>
-        <a href="${story.href}">${story.title}</a>
-      </p>
-      <div style="height:1px;background:var(--border);margin:12px 0"></div>
-    `;
-  });
-}
-</script>
-
 </body>
   <script src="stories-data.js"></script>
 <script src="stories.js"></script>
