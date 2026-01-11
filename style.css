@@ -65,10 +65,12 @@ body {
 
 .story-img {
   width: 100%;
-  max-height: 420px;
+  max-width: 100%;
+  max-height: 380px;   /* 🔥 KEY LINE – controls size */
   object-fit: cover;
   border-radius: 12px;
   margin: 14px 0;
+  display: block;
 }
 
 .read-more {
