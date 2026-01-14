@@ -89,3 +89,14 @@ body {
   font-size: 13px;
   margin: 40px 0 10px;
 }
+
+/* Full story page image control */
+.article .story-image {
+  width: 100%;
+  max-width: 900px;
+  max-height: 300px;   /* 🔑 THIS fixes the problem */
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 16px auto;
+  display: block;
+}
