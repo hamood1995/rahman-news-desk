@@ -296,3 +296,38 @@ body {
 .main-nav a:hover {
   color: #b91c1c;
 }
+
+/* FULL WIDTH BLACK BAR */
+.masthead {
+  background: #000;
+  border-bottom: 2px solid #b91c1c;
+  width: 100%;
+}
+
+/* INNER FLEX LAYOUT */
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* IMPORTANT */
+  padding: 12px 20px 12px 0;  /* no left padding */
+}
+
+/* LOGO GROUP */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* RND ICON — FLUSH LEFT */
+.logo-icon {
+  background: #b91c1c;
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  padding: 8px 14px;
+  margin-left: 0;        /* key */
+}
+
