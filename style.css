@@ -275,15 +275,6 @@ body {
   letter-spacing: 1px;
 }
 
-.site-title {
-  font-size: 34px;
-  font-weight: 900;
-  font-style: italic;
-  color: #fff;
-  border-bottom: 4px solid #fff;
-  padding-bottom: 2px;
-}
-
 /* NAVIGATION */
 .main-nav a {
   color: #fff;
