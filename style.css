@@ -1,105 +1,87 @@
-/* ===============================
-   RESET
+/* ================================
+   GLOBAL RESET
 ================================ */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background: #0b1220;
   color: #e5e7eb;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ===============================
+/* ================================
    BREAKING STRIP (TOP RED BAR)
 ================================ */
 .breaking-strip {
   background: #b91c1c;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 1.3px;
-  padding: 6px 18px;
+  letter-spacing: 1px;
+  padding: 6px 16px;
   text-transform: uppercase;
 }
 
-/* ===============================
-   MASTHEAD (PRESS STYLE)
+/* ================================
+   MASTHEAD (NY POST STYLE)
 ================================ */
 .masthead {
   background: #000000;
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 3px solid #b91c1c;
 }
 
 .masthead-inner {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 22px;
+  margin: auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
+/* BIG ITALIC LOGO */
 .masthead-title {
-  font-size: 42px;
-  font-weight: 900;
+  font-family: 'Oswald', Impact, Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 800;
   font-style: italic;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
   color: #ffffff;
-  text-shadow: 0 2px 0 rgba(0,0,0,0.6);
+  text-shadow: 0 3px 0 rgba(0,0,0,0.6);
 }
 
-.masthead-tagline {
-  font-size: 13px;
-  color: #9ca3af;
-  margin-top: 4px;
-}
-
+/* NAV */
 .masthead-nav a {
   color: #ffffff;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 700;
+  margin-left: 22px;
   letter-spacing: 1px;
-  margin-left: 26px;
 }
 
 .masthead-nav a:hover {
   text-decoration: underline;
 }
 
-/* ===============================
-   PAGE CONTAINER
-================================ */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 26px 20px;
-}
-
-/* ===============================
-   STORY CARD (HOMEPAGE)
+/* ================================
+   ARTICLE CARDS (HOMEPAGE)
 ================================ */
 .article {
+  max-width: 1200px;
+  margin: 32px auto;
   background: #0f172a;
-  border: 1px solid #1e293b;
   border-radius: 14px;
-  padding: 22px;
-  margin-bottom: 28px;
+  padding: 26px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
 }
 
-/* ===============================
-   TAGS
-================================ */
+/* TAGS */
 .tag {
   font-size: 12px;
   font-weight: 800;
@@ -109,119 +91,88 @@ a {
   display: inline-block;
 }
 
-.tag.fire { color: #f87171; }
-.tag.police { color: #60a5fa; }
-.tag.notice { color: #facc15; }
+.tag.breaking,
+.tag.fire {
+  color: #ef4444;
+}
 
-/* ===============================
-   HEADLINES
-================================ */
+.tag.police {
+  color: #3b82f6;
+}
+
+/* HEADLINE */
 .article h2 {
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 8px;
   color: #ffffff;
 }
 
-/* ===============================
-   META
-================================ */
+/* META */
 .meta {
   font-size: 14px;
   color: #9ca3af;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
-/* ===============================
-   HOMEPAGE IMAGE (CONTROLLED)
+/* ================================
+   IMAGE — FIXED SIZE (THIS IS KEY)
 ================================ */
-.article img,
 .story-img {
-  display: block;
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   max-height: 420px;
   object-fit: cover;
-  margin: 18px auto;
   border-radius: 12px;
-  background: #000;
+  display: block;
+  margin: 18px auto;
 }
 
-/* ===============================
-   READ MORE
-================================ */
+/* TEXT */
+.article p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #e5e7eb;
+}
+
+/* READ MORE */
 .read-more {
   display: inline-block;
-  margin-top: 10px;
-  color: #60a5fa;
+  margin-top: 14px;
   font-weight: 700;
+  color: #60a5fa;
+  text-decoration: none;
 }
 
 .read-more:hover {
   text-decoration: underline;
 }
 
-/* ===============================
-   FULL STORY PAGE
-================================ */
-.article.full h2 {
-  font-size: 34px;
-}
-
-.article.full p {
-  font-size: 16px;
-  margin-bottom: 16px;
-}
-
-/* ===============================
-   IMAGE GALLERY (STORY PAGES)
-================================ */
-.story-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.story-gallery img {
-  display: block;
-  width: 100%;
-  max-width: 760px;
-  max-height: 420px;
-  margin: 0 auto;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* ===============================
+/* ================================
    FOOTER
 ================================ */
-footer {
+.footer {
   text-align: center;
-  padding: 22px 10px;
-  font-size: 13px;
+  padding: 28px 10px;
+  font-size: 14px;
   color: #9ca3af;
-  border-top: 1px solid #1e293b;
-  margin-top: 40px;
 }
 
-/* ===============================
-   MOBILE
+/* ================================
+   MOBILE FIX
 ================================ */
 @media (max-width: 768px) {
   .masthead-title {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .article h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
-  .article img,
-  .story-img,
-  .story-gallery img {
-    max-width: 95%;
-    max-height: 300px;
+  .story-img {
+    max-height: 260px;
   }
 }
+
 
