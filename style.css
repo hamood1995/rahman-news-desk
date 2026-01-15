@@ -1,110 +1,183 @@
-body {
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #0f1c33, #05070c);
-  color: #eaeaea;
+  padding: 0;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 16px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+  line-height: 1.6;
 }
 
-.nav {
+a {
+  color: inherit;
+}
+
+/* ===============================
+   BREAKING STRIP (TOP RED BAR)
+================================ */
+.breaking-strip {
+  background: #b91c1c;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  padding: 6px 18px;
+  text-transform: uppercase;
+}
+
+/* ===============================
+   MASTHEAD (BLACK & WHITE)
+================================ */
+.masthead {
+  background: #000000;
+  border-bottom: 1px solid #1f2937;
+}
+
+.masthead-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(145deg, #0b1629, #050b16);
-  padding: 18px 22px;
-  border-radius: 18px;
-  margin-bottom: 24px;
 }
 
-.brand h1 {
-  margin: 0;
-  font-size: 20px;
+.masthead-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+  color: #ffffff;
 }
 
-.brand small {
-  color: #9aa4b2;
-}
-
-.navlinks a {
-  margin-left: 18px;
-  color: #4da3ff;
+.masthead-nav a {
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  margin-left: 26px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
+.masthead-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   PAGE CONTAINER
+================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 20px;
+}
+
+/* ===============================
+   STORY CARD (HOMEPAGE)
+================================ */
 .article {
-  background: linear-gradient(145deg, #0b1629, #050b16);
-  border-radius: 18px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
   padding: 22px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
+/* ===============================
+   TAGS
+================================ */
 .tag {
+  display: inline-block;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.breaking {
-  color: #ff4d4d;
+.tag.fire {
+  color: #f87171;
 }
 
-.police {
-  color: #4da3ff;
+.tag.police {
+  color: #60a5fa;
 }
 
+.tag.notice {
+  color: #facc15;
+}
+
+/* ===============================
+   HEADLINES
+================================ */
+.article h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* ===============================
+   META LINE
+================================ */
 .meta {
-  color: #9aa4b2;
-  font-size: 13px;
-  margin-bottom: 12px;
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 14px;
 }
 
+/* ===============================
+   STORY IMAGE (HOMEPAGE)
+================================ */
 .story-img {
   width: 100%;
-  max-width: 100%;
-  max-height: 380px;   /* 🔥 KEY LINE – controls size */
+  max-height: 420px;
   object-fit: cover;
   border-radius: 12px;
-  margin: 14px 0;
-  display: block;
+  margin-bottom: 14px;
 }
 
+/* ===============================
+   READ MORE LINK
+================================ */
 .read-more {
-  color: #4da3ff;
+  display: inline-block;
+  margin-top: 10px;
+  color: #60a5fa;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .read-more:hover {
   text-decoration: underline;
 }
 
-.footer {
-  text-align: center;
-  color: #9aa4b2;
-  font-size: 13px;
-  margin: 40px 0 10px;
+/* ===============================
+   FULL STORY PAGE
+================================ */
+.article.full h2 {
+  font-size: 34px;
 }
 
-/* Full story page image control */
-.article .story-image {
-  width: 100%;
-  max-width: 900px;
-  max-height: 300px;   /* 🔑 THIS fixes the problem */
-  object-fit: cover;
-  border-radius: 14px;
-  margin: 16px auto;
-  display: block;
+.article.full p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #e5e7eb;
 }
+
+/* ===============================
+   IMAGE GALLERY (STORY PAGES)
+================================ */
 .story-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  margin: 16px 0;
+  margin: 18px 0;
 }
 
 .story-gallery img {
@@ -113,57 +186,39 @@ body {
   object-fit: cover;
   border-radius: 12px;
 }
+
 /* ===============================
-   NEWSROOM MASTHEAD HEADER
+   FOOTER
 ================================ */
-
-<div class="breaking-strip">
-  BREAKING NEWS • NEW YORK CITY
-</div>
-
-<header class="masthead">
-  <div class="masthead-inner">
-    <div class="masthead-title">
-      RAHMAN NEWS DESK
-    </div>
-    <nav class="masthead-nav">
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-    </nav>
-  </div>
-</header>
-
-
-.news-nav{
-  display:flex;
-  gap:26px;
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  font-size: 13px;
+  color: #9ca3af;
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
 }
 
-.news-nav a{
-  color:#c6d4f1;
-  text-decoration:none;
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:.4px;
-}
-
-.news-nav a:hover{
-  color:#ffffff;
-  text-decoration:underline;
-}
-
-/* Mobile */
-@media (max-width: 700px){
-  .news-header-inner{
-    flex-direction:column;
-    align-items:flex-start;
+/* ===============================
+   MOBILE ADJUSTMENTS
+================================ */
+@media (max-width: 700px) {
+  .masthead-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
-  .news-title a{
-    font-size:28px;
+  .masthead-title {
+    font-size: 26px;
   }
 
-  .news-nav{
-    margin-top:14px;
+  .article h2 {
+    font-size: 24px;
+  }
+
+  .article.full h2 {
+    font-size: 28px;
   }
 }
+
