@@ -27,46 +27,66 @@ body {
   text-transform: uppercase;
 }
 
-/* ================================
-   MASTHEAD (NY POST STYLE)
-================================ */
+/* === MASTHEAD === */
 .masthead {
-  background: #000000;
-  border-bottom: 3px solid #b91c1c;
+  background: #000;
+  border-bottom: 3px solid #c91c1c;
 }
 
 .masthead-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 16px;   /* controls vertical height */
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
-/* BIG ITALIC LOGO */
-.masthead-title {
-  font-family: 'Oswald', Impact, Arial, sans-serif;
-  font-size: 44px;
-  font-weight: 800;
+/* LEFT SIDE */
+.masthead-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* RND LOGO */
+.logo-box {
+  background: #c91c1c;
+  color: #fff;
+  font-weight: 900;
   font-style: italic;
+  padding: 10px 14px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* SITE TITLE */
+.site-title {
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
-  text-shadow: 0 3px 0 rgba(0,0,0,0.6);
+
+  /* underline REMOVED */
 }
 
-/* NAV */
+/* RIGHT NAV */
+.masthead-nav {
+  display: flex;
+  gap: 28px;
+}
+
 .masthead-nav a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
   font-weight: 700;
-  margin-left: 22px;
   letter-spacing: 1px;
 }
 
 .masthead-nav a:hover {
-  text-decoration: underline;
+  color: #c91c1c;
 }
 
 /* ================================
