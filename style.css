@@ -370,3 +370,24 @@ body {
   margin-left: 0;        /* key */
 }
 
+/* ===== STORY IMAGE FIX (ALL STORIES) ===== */
+.story-image-wrap {
+  max-width: 900px;
+  margin: 18px auto;
+}
+
+.story-image-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .story-image-wrap img {
+    max-height: 360px;
+  }
+}
