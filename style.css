@@ -262,3 +262,28 @@ footer {
     max-height: 220px;
   }
 }
+
+/* ===============================
+   CENTERED STORY IMAGE (FDNY STYLE)
+   =============================== */
+
+.article img,
+.article .story-img {
+  display: block;
+  width: 100%;
+  max-width: 760px;      /* controls image size */
+  max-height: 440px;
+  margin: 24px auto;     /* centers image */
+  object-fit: cover;
+  border-radius: 10px;
+  background: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .article img,
+  .article .story-img {
+    max-width: 94%;
+    max-height: 300px;
+  }
+}
