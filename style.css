@@ -442,3 +442,89 @@ body {
   border-radius: 12px;
   display: block;
 }
+
+/* =========================
+   GLOBAL HEADER (ALL PAGES)
+========================= */
+
+.site-header {
+  width: 100%;
+}
+
+/* RED BREAKING BAR */
+.breaking-bar {
+  background: #c01616;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+
+/* BLACK MASTHEAD */
+.masthead {
+  background: #000;
+  border-bottom: 2px solid #c01616;
+}
+
+/* CENTERED INNER LAYOUT */
+.masthead-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  background: #c01616;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.site-title {
+  font-size: 26px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+.news-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.news-nav a:hover {
+  color: #c01616;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .masthead-inner {
+    flex-wrap: wrap;
+  }
+
+  .news-nav {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+}
