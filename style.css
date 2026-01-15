@@ -563,3 +563,38 @@ body {
     padding-right: 14px;
   }
 }
+
+/* =========================
+   STORY IMAGE FIX (NO MORE WIDE BANNERS)
+========================= */
+
+/* Home page & story images */
+.article img,
+.story img,
+.story-image,
+.story-gallery img {
+  width: 100%;
+  max-width: 900px;          /* 🔥 limits how wide images can be */
+  height: auto;
+  display: block;
+  margin: 18px auto;         /* centers image */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Prevent ultra-wide stretching */
+.story-image,
+.story-gallery img {
+  aspect-ratio: 16 / 9;      /* cinematic, news standard */
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .article img,
+  .story img,
+  .story-image,
+  .story-gallery img {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+}
