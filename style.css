@@ -230,3 +230,17 @@ body {
 .news-header {
   padding: 12px 0 !important;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  overflow: visible;          /* IMPORTANT */
+  padding: 6px 14px;          /* give breathing room */
+}
+
+.logo span,
+.logo-text {
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
