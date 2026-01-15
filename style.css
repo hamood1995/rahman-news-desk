@@ -214,3 +214,15 @@ body {
   display: block;
   border-radius: 10px;
 }
+
+.masthead-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.masthead-logo {
+  width: 46px;
+  height: 46px;
+  display: block;
+}
