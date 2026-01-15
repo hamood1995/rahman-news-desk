@@ -182,9 +182,16 @@ body {
    MOBILE FIX
 ================================ */
 @media (max-width: 768px) {
-  .masthead-title {
-    font-size: 32px;
+  .masthead-inner {
+    flex-wrap: wrap;
   }
+
+  .masthead-nav {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+}
 
   .article h2 {
     font-size: 22px;
