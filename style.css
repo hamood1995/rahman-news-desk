@@ -182,14 +182,35 @@ body {
    MOBILE FIX
 ================================ */
 @media (max-width: 768px) {
+
   .masthead-inner {
-    flex-wrap: wrap;
+    padding: 10px 12px;
+    align-items: center;
+  }
+
+  .masthead-left {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo-box {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .site-title {
+    font-size: 20px;
+    line-height: 1.15;
+    max-width: 180px; /* controls wrap nicely */
   }
 
   .masthead-nav {
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 8px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .masthead-nav a {
+    font-size: 14px;
   }
 }
 
