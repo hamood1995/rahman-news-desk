@@ -391,3 +391,23 @@ body {
     max-height: 360px;
   }
 }
+
+/* PAGE BASE */
+body {
+  margin: 0;
+  background: #0b1324;
+  color: #eaeaea;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+/* FULL-WIDTH SECTIONS */
+.full-width {
+  width: 100%;
+}
+
+/* CENTERED CONTENT (WIDER THAN BEFORE) */
+.content-wrap {
+  max-width: 1400px;   /* ← THIS is the key */
+  margin: 0 auto;
+  padding: 0 24px;
+}
