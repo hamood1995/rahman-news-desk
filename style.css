@@ -117,37 +117,22 @@ body {
    NEWSROOM MASTHEAD HEADER
 ================================ */
 
-.news-header {
-  background: #0b1220; /* flat dark navy */
-  border-bottom: 2px solid #1f2937;
-  padding: 14px 0;
-}
+<div class="breaking-strip">
+  BREAKING NEWS • NEW YORK CITY
+</div>
 
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-title">
+      RAHMAN NEWS DESK
+    </div>
+    <nav class="masthead-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
 
-.news-header-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 20px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:24px;
-}
-
-.news-title a{
-  color:#ffffff;
-  font-size:34px;
-  font-weight:900;
-  letter-spacing:1px;
-  text-decoration:none;
-}
-
-.news-tagline{
-  margin-top:6px;
-  font-size:14px;
-  color:#9fb4da;
-  font-weight:500;
-}
 
 .news-nav{
   display:flex;
