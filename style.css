@@ -222,7 +222,11 @@ body {
 }
 
 .masthead-logo {
-  width: 46px;
-  height: 46px;
-  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+/* FINAL MASTHEAD HEIGHT FIX */
+.news-header {
+  padding: 12px 0 !important;
 }
