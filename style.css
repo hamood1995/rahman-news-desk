@@ -117,11 +117,12 @@ body {
    NEWSROOM MASTHEAD HEADER
 ================================ */
 
-.news-header{
-  background:#050b18;
-  border-bottom:3px solid #0f1e3d;
-  padding:26px 0;
+.news-header {
+  background: #0b1220; /* flat dark navy */
+  border-bottom: 2px solid #1f2937;
+  padding: 14px 0;
 }
+
 
 .news-header-inner{
   max-width:1200px;
