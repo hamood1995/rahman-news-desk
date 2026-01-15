@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#b91c1c"/>
+  <text x="60" y="78"
+        text-anchor="middle"
+        font-family="Arial Black, Impact, Helvetica, sans-serif"
+        font-size="64"
+        font-style="italic"
+        fill="#ffffff"
+        letter-spacing="-4">
+    RND
+  </text>
+</svg>
