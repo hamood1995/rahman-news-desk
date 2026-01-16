@@ -780,3 +780,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.site-title {
+  white-space: nowrap;      /* 🔑 keeps it on one line */
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
