@@ -792,3 +792,37 @@ body {
   letter-spacing: 1px;
   color: #fff;
 }
+
+/* --- HARD FIX: Prevent logo from touching breaking bar --- */
+
+.site-header {
+  position: relative;
+  z-index: 100;
+}
+
+.breaking-bar {
+  position: relative;
+  z-index: 200;
+}
+
+.masthead {
+  position: relative;
+  z-index: 150;
+  margin-top: 0;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+
+  .breaking-bar {
+    padding-bottom: 10px;
+  }
+
+  .masthead {
+    padding-top: 14px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+}
