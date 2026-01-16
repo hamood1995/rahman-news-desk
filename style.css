@@ -635,3 +635,64 @@ body {
   display: flex;
   gap: 28px;
 }
+
+/* ===============================
+   STORY CONTENT SCALE (NO HEADER / FOOTER)
+   =============================== */
+
+.article-full,
+.article,
+.story-content {
+  max-width: 920px;      /* was too wide */
+  margin: 0 auto;
+  font-size: 0.95rem;    /* slightly smaller text */
+  line-height: 1.6;
+}
+
+/* Headline size reduced */
+.article-full h1,
+.article h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+}
+
+/* Sub-headings */
+.article-full h2,
+.article h2 {
+  font-size: 1.35rem;
+}
+
+/* Paragraphs */
+.article-full p,
+.article p {
+  font-size: 0.95rem;
+}
+
+/* Story images (NOT full-width anymore) */
+.article-full img,
+.article img {
+  max-width: 92%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .article-full,
+  .article {
+    font-size: 0.93rem;
+  }
+
+  .article-full h1,
+  .article h1 {
+    font-size: 1.55rem;
+  }
+
+  .article-full img,
+  .article img {
+    max-width: 100%;
+  }
+}
+
