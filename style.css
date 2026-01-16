@@ -696,3 +696,13 @@ body {
   }
 }
 
+.site-title {
+  color: #fff;
+  text-decoration: none;   /* removes underline */
+  font-weight: 800;
+  font-style: italic;
+}
+
+.site-title:hover {
+  opacity: 0.9;
+}
