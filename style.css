@@ -748,3 +748,35 @@ body {
     letter-spacing: 1px;
   }
 }
+
+/* Fix RND logo alignment inside masthead */
+.masthead {
+  background: #000;
+  border-bottom: 2px solid #c4161c;
+}
+
+.masthead-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;      /* 🔑 THIS FIXES IT */
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;      /* 🔑 THIS FIXES IT */
+  gap: 14px;
+}
+
+.logo {
+  background: #c4161c;
+  color: #fff;
+  font-weight: 800;
+  padding: 8px 14px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
