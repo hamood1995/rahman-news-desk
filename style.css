@@ -945,3 +945,19 @@ body {
   margin: 0 auto;
   padding: 24px;
 }
+
+.story-byline {
+  margin: 10px 0 12px;
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+.story-byline strong {
+  color: #ffffff;
+}
+
+.byline-sub {
+  font-size: 0.85rem;
+  color: #9aa3b2;
+  letter-spacing: 0.5px;
+}
