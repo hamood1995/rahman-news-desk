@@ -915,3 +915,33 @@ body {
   margin: 0 auto;
   padding: 24px;
 }
+
+/* GLOBAL SITE WIDTH */
+:root {
+  --site-width: 1100px;
+}
+
+/* HEADER FULL WIDTH */
+.site-header {
+  width: 100%;
+}
+
+/* HEADER INNER CONTENT */
+.masthead-inner {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* MAIN CONTENT */
+.main-content,
+.story-container,
+.about-container {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 24px;
+}
