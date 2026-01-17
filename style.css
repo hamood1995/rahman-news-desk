@@ -894,3 +894,24 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* FORCE SAME WIDTH FOR HEADER + CONTENT */
+
+:root {
+  --site-width: 1100px;
+}
+
+/* Header */
+.masthead-inner {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+}
+
+/* Main content */
+.main-content,
+.story-container {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 24px;
+}
