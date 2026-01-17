@@ -842,3 +842,55 @@ body {
   padding: 24px;
 }
 
+/* HEADER WIDTH LOCK (CRITICAL FIX) */
+.masthead {
+  background: #000;
+  border-bottom: 2px solid #c81616;
+}
+
+.masthead-inner {
+  max-width: 1200px;   /* LOCKS HEADER CONTENT */
+  margin: 0 auto;      /* Centers on all screens */
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand (logo + name) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  background: #c81616;
+  color: #fff;
+  font-weight: 800;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+/* Site title */
+.site-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+/* Navigation */
+.news-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.news-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
