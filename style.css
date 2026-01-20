@@ -1045,3 +1045,26 @@ main,
 main img {
   max-height: 420px;
 }
+
+  <!-- STORY 6 -->
+
+  <div class="article-card">
+
+  <span class="tag police">POLICE • OZONE PARK</span>
+
+  <h2>Package Theft Suspect Arrested Following Civilian Patrol Alert</h2>
+
+  <div class="meta">
+    Jan 19, 2025 • 85th Street & Forest Parkway
+  </div>
+
+  <img src="stolenpackage.png" alt="Package theft arrest in Ozone Park">
+
+  <p>
+    A suspected package thief was arrested in Ozone Park following repeated
+    neighborhood complaints and a civilian patrol alert.
+  </p>
+
+  <a href="story-06.html" class="read-more">Read more →</a>
+
+</div>
