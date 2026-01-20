@@ -990,3 +990,27 @@ body {
   max-width: 100%;
   margin-bottom: 28px;
 }
+
+/* =========================
+   INDEX STORY IMAGE FIX
+   ========================= */
+
+/* Ensure ALL images inside story cards behave */
+.article-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Prevent tall-wide police images from stretching */
+.article-card {
+  overflow: hidden;
+}
+
+/* Optional: keep image height reasonable */
+.article-card img {
+  max-height: 420px;
+}
