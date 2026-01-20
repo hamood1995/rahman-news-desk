@@ -961,3 +961,15 @@ body {
   color: #9aa3b2;
   letter-spacing: 0.5px;
 }
+
+/* =========================
+   HOMEPAGE STORY IMAGE FIX
+   ========================= */
+
+.article-card img {
+  width: 100%;
+  height: 220px;           /* 🔑 FORCE SAME HEIGHT */
+  object-fit: cover;       /* crops nicely */
+  border-radius: 10px;
+  display: block;
+}
