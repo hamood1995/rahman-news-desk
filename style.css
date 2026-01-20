@@ -1142,3 +1142,20 @@ img {
 .article-card * {
   max-width: 100%;
 }
+
+/* =========================================
+   INDEX PAGE IMAGE SCALE (GLOBAL)
+   ========================================= */
+
+/* Slightly reduce all images inside article cards */
+.article-card > img {
+  max-height: 360px;       /* was ~420 */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Optional: tighten spacing so page looks cleaner */
+.article-card {
+  padding: 20px;
+}
