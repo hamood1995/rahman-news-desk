@@ -1014,3 +1014,34 @@ body {
 .article-card img {
   max-height: 420px;
 }
+
+/* =========================
+   HARD STOP IMAGE OVERFLOW FIX
+   (FOR INDEX PAGE)
+   ========================= */
+
+/* Catch ALL images inside main content */
+main img,
+.main-content img,
+.article img,
+.article-card img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Prevent images from breaking layout */
+main,
+.main-content,
+.article,
+.article-card {
+  overflow: hidden;
+}
+
+/* Limit overly wide police photos */
+main img {
+  max-height: 420px;
+}
