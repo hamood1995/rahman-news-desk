@@ -1174,3 +1174,12 @@ img {
   margin: 18px auto;
   border-radius: 12px;
 }
+/* Story page image control */
+.story-content img {
+  display: block;
+  width: 100%;
+  max-width: 780px;   /* controls image size on desktop */
+  height: auto;
+  margin: 20px auto;  /* centers image */
+  border-radius: 12px;
+}
