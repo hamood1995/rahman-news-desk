@@ -1183,3 +1183,12 @@ img {
   margin: 20px auto;  /* centers image */
   border-radius: 12px;
 }
+/* Story page image sizing (FINAL FIX) */
+.story-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;   /* adjust: 650–780 if you want */
+  height: auto;
+  margin: 24px auto;
+  border-radius: 12px;
+}
