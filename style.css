@@ -1159,3 +1159,18 @@ img {
 .article-card {
   padding: 20px;
 }
+
+/* STORY PAGE IMAGE SIZE CONTROL */
+.story-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 720px;   /* ← THIS controls how small it is */
+  height: auto;
+  display: block;
+  margin: 18px auto;
+  border-radius: 12px;
+}
